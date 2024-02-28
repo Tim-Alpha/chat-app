@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e7eff6; /* Light blue background */
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    min-height: 100vh;
+    background-color: #fff;
+}
+.chat-list-outer-container {
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    /* margin: auto; */
+    max-height: 90vh;
+    /* overflow: hidden; */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.chat-list-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    margin: auto 2px;
+    min-height: 90vh;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.chat-outer-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto 2px;
+    min-height: 82vh;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.header {
+    text-align: center;
+    color: #007bff;
+    margin: 12px;
+}
+
+.chat-messages {
+    max-height: 300px;
+    height: 100%;
+    min-height: 80vh;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9; /* Lighter grey for contrast */
+}
+.chat-messages {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    /* scrollbar-width: none; /* Firefox */
+}
+.chat-messages::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+.message-input-area {
+    display: flex;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-right: 5px; /* Spacing between input and button */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgb(4, 4, 143);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0517bf;
+}
+
+.message-sent, .message-received {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 80%;
+}
+
+.message-sent {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    color: #0056b3;
+}
+
+.message-received {
+    background-color: #f5f5f5;
+    align-self: flex-start;
+}
+
+.profile-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+p {
+    cursor: pointer;
+    font-size: 1.4em;
+    width: 100%;
+    margin: 0px 0px 5px 0px;
+    padding: 10px 10px;
+    text-align: left;
+    border-radius: 5px solid grey;
+    color: grey;
+}
+
+
+#user-list {
+    background-color: #fff;
+    color: white;
+    width: 100%;
+    min-height: 80vh;
+    max-height: 90vh;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+}
+
+
+.list {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff; /* Changed from color white to background color white */
+}
+
+.list p {
+    margin-left: 10px; /* Spacing between image and username */
+    color: #333; /* Darker text color for better readability */
+    flex-grow: 1;
+}
+
+.list:hover{
+    background-color: rgb(215, 211, 211);
+    color: white;
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensure the image covers the area */
+}
+
+.list-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+    max-height: 100vh;
+    /* border-bottom: 1px solid #ccc; */
+}
+
+.user-info {
+    flex-grow: 1;
+}
+
+.sender-username {
+    font-size: .7rem;
+}
+
+.user-name {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.name-time-container {
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.last-message-container {
+    display: flex;
+}
+
+.last-message {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 5px 0 0 0;
+}
+
+.sent-time {
+    font-size: 15px;
+    text-align: right;
+    margin-left: auto;
+    padding-left: auto;
+    white-space: nowrap;
+}
