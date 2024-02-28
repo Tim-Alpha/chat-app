@@ -1,5 +1,5 @@
 // const mixed = prompt("Enter username: ");
-const mixed = "kinha";
+const mixed = "sachinkin";
 
 // const flicToken = prompt("Paste your Flic-Token to login: ");
 const flicToken = "flic_f9014c2ce769a83bced4f9418781630601de66b7e7228ba1730756800ef549c6";
