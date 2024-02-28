@@ -2,7 +2,8 @@
 const mixed = "kinha";
 
 // const flicToken = prompt("Paste your Flic-Token to login: ");
-const flicToken = "flic_c275738d9b800b745a9178ae2d1931046813c1f5ec8146ffdf73344d026e7b5e";
+const flicToken = "flic_f9014c2ce769a83bced4f9418781630601de66b7e7228ba1730756800ef549c6";
+// const flicToken = "flic_47f439db8f7925ead119b54e7345d239dc56ae120982f50118aadadd9cb6da6a";
 
 // Get DOM elements
 const chatMessages = document.getElementById("chat-messages");
@@ -10,8 +11,9 @@ const messageInput = document.getElementById("message-input");
 const sendButton = document.getElementById("send-button");
 const pingInterval = 10000 * 5;
 
-// Set up the WebSocket connection
-const socket = new WebSocket(`ws://localhost:8080?token=${flicToken}`);
+// Set up the WebSocket connection 
+// const socket = new WebSocket(`ws://localhost:8080?token=${flicToken}`);
+const socket = new WebSocket(`wss://api.socialverseapp.com/websocket?token=${flicToken}`);
 
 // WebSocket event for when the connection is open
 socket.onopen = function (e) {
@@ -125,10 +127,11 @@ function fetchData() {
 
 // Function to fetch the user list
 async function fetchUserList() {
-  const response = await fetch('http://localhost:8000/user/chats?page=1', {
+//   const response = await fetch('http://localhost:8000/user/chats?page=1', {
+    const response = await fetch('https://api.socialverseapp.com/user/chats?page=1', {
       method: 'GET',
       headers: {
-          'Flic-Token': 'flic_c275738d9b800b745a9178ae2d1931046813c1f5ec8146ffdf73344d026e7b5e'
+          'Flic-Token': flicToken
       }
   });
   const data = await response.json();
@@ -157,10 +160,6 @@ function renderList(items) {
       itemDiv.classList.add('list');
 
       // Create the inner HTML content using data from the UserChats model
-
-      // <div>${item.type}</div>
-          // <div>${item.id}</div>
-          // <div>${item.user_id}</div>
       itemDiv.innerHTML = `
           <div class="list-item">
             <img class="profile-image" src="${item.profileUrl}" alt="Profile image">
