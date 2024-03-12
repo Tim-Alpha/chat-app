@@ -20,13 +20,13 @@ socket.onopen = function (e) {
     console.log("Connection to server established.");
 
     // Start sending ping messages at regular intervals
-    setInterval(function () {
-        if (socket.readyState === WebSocket.OPEN) {
-            console.log("pong");
-            const pongMessage = JSON.stringify({type: "heartbeat", beat: "pong" });
-            socket.send(pongMessage);
-        }
-    }, pingInterval);
+    // setInterval(function () {
+    //     if (socket.readyState === WebSocket.OPEN) {
+    //         console.log("pong");
+    //         const pongMessage = JSON.stringify({type: "heartbeat", beat: "pong" });
+    //         socket.send(pongMessage);
+    //     }
+    // }, pingInterval);
 
 };
 
