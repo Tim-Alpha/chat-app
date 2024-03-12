@@ -3,7 +3,7 @@ const mixed = "kinha";
 
 // const flicToken = prompt("Paste your Flic-Token to login: ");
 // const flicToken = "flic_f9014c2ce769a83bced4f9418781630601de66b7e7228ba1730756800ef549c6";
-const flicToken = "flic_de07314ffabd475a7361fe01eac32595f94eb042b4ea9490058a50e6e2a6bce1";
+const flicToken = "flic_11f7ef5c7892ecf4a8c27245891ef6097e60f00497c4a66d130ff65354cebec9";
 
 // Get DOM elements
 const chatMessages = document.getElementById("chat-messages");
