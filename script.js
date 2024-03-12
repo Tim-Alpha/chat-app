@@ -27,7 +27,11 @@ socket.onopen = function (e) {
     //         socket.send(pongMessage);
     //     }
     // }, pingInterval);
-
+    console.log(e);
+    // Error handling for the WebSocket connection
+    socket.onerror = function(error) {
+        console.error("WebSocket connection error:", error);
+    };
 };
 
 // WebSocket event for receiving a message
