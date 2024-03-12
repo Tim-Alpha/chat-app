@@ -13,8 +13,8 @@ const pingInterval = 10000 * 5;
 
 // Set up the WebSocket connection 
 // const socket = new WebSocket(`ws://localhost:8080?token=${flicToken}`);
-const socket = new WebSocket(`wss://api.socialverseapp.com/websocket?token=${flicToken}`);
-
+const socket = new WebSocket(`wss://api.socialverseapp.com/websocket?token=flic_11f7ef5c7892ecf4a8c27245891ef6097e60f00497c4a66d130ff65354cebec9`);
+// wss://api.socialverseapp.com/websocket?token=flic_11f7ef5c7892ecf4a8c27245891ef6097e60f00497c4a66d130ff65354cebec9
 // WebSocket event for when the connection is open
 socket.onopen = function (e) {
     console.log("Connection to server established.");
